@@ -99,6 +99,7 @@
                 </owl:unionOf>
             </owl:Class>
         </rdfs:range>
+        <rdfs:comment>Un traitement a pour dose initiale ou intermiaire ou maximale</rdfs:comment>
     </owl:ObjectProperty>
     
 
@@ -146,6 +147,42 @@
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraCommePEC -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraCommePEC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementContreIndique -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementContreIndique">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementDernierRecours -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementDernierRecours">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementPossible -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementPossible">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementRecommande -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraPourTraitementRecommande">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
     </owl:ObjectProperty>
     
@@ -348,7 +385,6 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationTriple">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationsMedicamenteuses"/>
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
     </owl:Class>
     
 
@@ -947,6 +983,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AlphaMethtylDopa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AlphaMethtylDopa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII">
@@ -974,6 +1018,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#BetaBloquant -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#BetaBloquant">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete">
@@ -988,6 +1040,14 @@
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec">
         <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
         <estCiPour rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InhibiteurCalcique -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InhibiteurCalcique">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
     </owl:NamedIndividual>
     
 
