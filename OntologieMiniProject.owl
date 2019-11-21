@@ -1,0 +1,1730 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#"
+     xml:base="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:DOE="http://cwi.nl/~troncy/DOE#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:obda="https://w3id.org/obda/vocabulary#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:metadata="http://data.bioontology.org/metadata/"
+     xmlns:ontolurgences="http://www.limics.fr/ontologies/ontolurgences#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourCI -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourCI">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#estCiPour"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourClasseT -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourClasseT">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+        <rdfs:comment>Un Traitement a pour classes Therapeputiques Une Ou plusieurs Classes</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourDose -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourDose">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:range>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourMaladieSousJacente -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourMaladieSousJacente">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourMedocs -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourMedocs">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:comment>le Patient prend pour medicaments</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourSexe -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourSexe">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourTraitementCourant -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourTraitementCourant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraCommePEC -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#auraCommePEC">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#estCiPour -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#estCiPour">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aDesSignesDeSurcharge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aDesSignesDeSurcharge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourAge -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourAge">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUnRisqueDeGrossesse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUnRisqueDeGrossesse">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneDyslipidemie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneDyslipidemie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneGrossesse -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneGrossesse">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaControlee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaControlee">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistante -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistante">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistanteConfirmee -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistanteConfirmee">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistante"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHypokaliemie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHypokaliemie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneMicroAlbuminurie -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneMicroAlbuminurie">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneToleranceTRTCourant -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneToleranceTRTCourant">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AlphaB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AlphaB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntecedentCV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntecedentCV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntiHCentral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntiHCentral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationDouble -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationDouble">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationsMedicamenteuses"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationTriple"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationTriple -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationTriple">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationsMedicamenteuses"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationsMedicamenteuses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AssociationsMedicamenteuses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AtcdAVC -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AtcdAVC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntecedentCV"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AtcdIDM"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AtcdIDM -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AtcdIDM">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntecedentCV"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#BB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#BB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cardiopathie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cardiopathie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#CardiopathieIschemiqueSansICSansIdm -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#CardiopathieIschemiqueSansICSansIdm">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cardiopathie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceCardiaque"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cholestase -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cholestase">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#CirhoseBiliaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#CirhoseBiliaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#HautRisqueCV -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#HautRisqueCV">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec_c -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec_c">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InhibiteurCalcique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InhibiteurCalcique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceCardiaque -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceCardiaque">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cardiopathie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceHepatique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceHepatique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisantRenal -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisantRenal">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAdjuvant -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAdjuvant">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAraII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAraII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAvisSpecialise -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAvisSpecialise">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParDiuritiquesDeLanse -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParDiuritiquesDeLanse">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAdjuvant"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParICAOuAlphaMetDopaOuBB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParICAOuAlphaMetDopaOuBB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIec -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIec">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIecEtBB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIecEtBB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIecOuBBOuDtz -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIecOuBBOuDtz">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParThiazidiqueEtDeuxParmisBBetICA -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParThiazidiqueEtDeuxParmisBBetICA">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParTritherapie"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParTritherapie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParTritherapie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Thiazidiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Thiazidiques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAlphaB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAlphaB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAntiHCentral -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAntiHCentral">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAraII -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAraII">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuBB -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuBB">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuIec -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuIec">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuInhibiteurCalcique -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuInhibiteurCalcique">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuThiazidiques -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuThiazidiques">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Atacand -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Atacand">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAraII"/>
+        <aPourClasseT rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Aucun -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Aucun">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+        <estCiPour rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeEnceinte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeEnceinte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParICAOuAlphaMetDopaOuBB"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+        <aUneGrossesse rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</aUneGrossesse>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeIrene -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeIrene">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <aPourCI rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Aucun"/>
+        <aUneClairance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">45</aUneClairance>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+        <aPourCI rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+        <aPourMaladieSousJacente rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete"/>
+        <aPourTraitementCourant rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Atacand"/>
+        <aUneClairance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">28</aUneClairance>
+        <aUneHtaControlee rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneHtaControlee>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrCas_deux -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrCas_deux">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAraII"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMonoTherapie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+        <aPourTraitementCourant rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril"/>
+        <aUneToleranceTRTCourant rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneToleranceTRTCourant>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrNonCMono -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrNonCMono">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParMedicament"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatientPEPec"/>
+        <aPourTraitementCourant rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril"/>
+        <aUneHtaControlee rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneHtaControlee>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrPropre -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrPropre">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+        <aDesSignesDeSurcharge rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aDesSignesDeSurcharge>
+        <aUnRisqueDeGrossesse rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUnRisqueDeGrossesse>
+        <aUneClairance rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">90</aUneClairance>
+        <aUneDyslipidemie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneDyslipidemie>
+        <aUneGrossesse rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneGrossesse>
+        <aUneHtaControlee rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneHtaControlee>
+        <aUneHtaResistante rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneHtaResistante>
+        <aUneHypokaliemie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneHypokaliemie>
+        <aUneMicroAlbuminurie rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</aUneMicroAlbuminurie>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril">
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuIec"/>
+        <aPourClasseT rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisantRenal"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneClairance"/>
+                <owl:someValuesFrom>
+                    <rdfs:Datatype>
+                        <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                        <owl:withRestrictions rdf:parseType="Collection">
+                            <rdf:Description>
+                                <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</xsd:maxInclusive>
+                            </rdf:Description>
+                        </owl:withRestrictions>
+                    </rdfs:Datatype>
+                </owl:someValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:intersectionOf>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PatronDose"/>
+    </owl:Class>
+    <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:intersectionOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AlphaB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntiHCentral"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#BB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec_c"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InhibiteurCalcique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Thiazidiques"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AntecedentCV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cardiopathie"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Cholestase"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#CirhoseBiliaire"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#HautRisqueCV"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceHepatique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Faible"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Intermediaire"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Maximale"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatronConception"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAlphaB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAntiHCentral"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuAraII"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuBB"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuIec"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuInhibiteurCalcique"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TuThiazidiques"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Atacand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Aucun"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeEnceinte"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeIrene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrCas_deux"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrNonCMono"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrPropre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#AraII"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Atacand"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Diabete"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisanceRenale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeEnceinte"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MmeIrene"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrAchile"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrCas_deux"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrNonCMono"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MrPropre"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ramipril"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ci">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">InsuffisantRenal</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#InsuffisantRenal"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourCI"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ci"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Ci"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIec"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">PassageAlaBi</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourTraitementCourant"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#TraitementUnaire"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#t"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaControlee"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParBitherapie"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IntoleranceIec</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourTraitementCourant"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#t"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aPourClasseT"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#t"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#Iec"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneToleranceTRTCourant"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParAraII"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">NewPatient</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaResistante"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneGrossesse"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUnRisqueDeGrossesse"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHtaControlee"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneMicroAlbuminurie"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aDesSignesDeSurcharge"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneDyslipidemie"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneHypokaliemie"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                                                                        <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">false</swrl:argument2>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParIecOuBBOuDtz"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Grossesse</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#aUneGrossesse"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrl:argument2>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#PPEPecParICAOuAlphaMetDopaOuBB"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
