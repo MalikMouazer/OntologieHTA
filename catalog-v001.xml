@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://www.limcs.fr/ontologies/ontolurgences" uri="OntolUrgences_extract.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1574459134242" name="http://www.limcs.fr/ontologies/ontolurgences" uri="OntolUrgences_extract.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1574459134242" name="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject" uri="OntologieMiniProject.owl"/>
+    </group>
+</catalog>

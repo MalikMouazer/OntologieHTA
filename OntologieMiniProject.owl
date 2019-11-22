@@ -15,7 +15,9 @@
      xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
      xmlns:metadata="http://data.bioontology.org/metadata/"
      xmlns:ontolurgences="http://www.limics.fr/ontologies/ontolurgences#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject"/>
+    <owl:Ontology rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject">
+        <owl:imports rdf:resource="http://www.limcs.fr/ontologies/ontolurgences"/>
+    </owl:Ontology>
     
 
 
@@ -1065,19 +1067,25 @@
 
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMaladiesSousJacentes">
+        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#MaladieEtat"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyMedicaments">
+        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#Medicament"/>
+    </owl:Class>
     
 
 
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyPatient">
+        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#Patient"/>
+    </owl:Class>
     
 
 
@@ -1089,7 +1097,9 @@
 
     <!-- http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux"/>
+    <owl:Class rdf:about="http://www.semanticweb.org/malik/ontologies/2019/10/MyOntoProject#MyTraitementMedicamenteux">
+        <rdfs:subClassOf rdf:resource="http://www.limics.fr/ontologies/ontolurgences#TraitementMedicamenteux"/>
+    </owl:Class>
     
 
 
