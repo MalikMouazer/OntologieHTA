@@ -1,0 +1,29 @@
+
+Grossesse 
+MyPatient(?x) ^ aUneGrossesse(?x, true) -> PPEPecParICAOuAlphaMetDopaOuBB(?x)
+
+
+Insuffisant renal 
+MyPatient(?x) ^ InsuffisantRenal(?x) ^ aPourCI(?x, ?Ci) ^ differentFrom(?Ci, Iec) -> PPEPecParIec(?x)
+
+
+Intolerance aux Iec 
+MyPatient(?x) ^ aPourTraitementCourant(?x, ?t) ^ aPourClasseT(?t, Iec) ^ aUneToleranceTRTCourant(?x, false) -> PPEPecParAraII(?x)
+
+Nouveau Patient
+
+aUneHtaResistante(?x, false) ^ MyPatient(?x) ^ aUneGrossesse(?x, false) ^ aUnRisqueDeGrossesse(?x, false) ^ aUneHtaControlee(?x, false) ^ aUneMicroAlbuminurie(?x, false) ^ aDesSignesDeSurcharge(?x, false) ^ aUneDyslipidemie(?x, false) ^ aUneHypokaliemie(?x, false) -> PPEPecParIecOuBBOuDtz(?x)
+
+
+Passage à la bitherapie
+MyPatient(?x) ^ aPourTraitementCourant(?x, ?t) ^ TraitementUnaire(?t) ^ aUneHtaControlee(?x, false) -> PPEPecParBitherapie(?x)
+
+
+
+
+
+
+
+=====================================
+====================================
+
