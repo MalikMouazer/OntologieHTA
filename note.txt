@@ -27,3 +27,10 @@ MyPatient(?x) ^ aPourTraitementCourant(?x, ?t) ^ TraitementUnaire(?t) ^ aUneHtaC
 =====================================
 ====================================
 
+MyPatient(?x) ^ aPourTraitementCourant(?x, ?t) ^ TraitementUnaire(?t) ^ aUneHtaControlee(?x, false) ^ aPourCI(?x, ?Ci) ^ differentFrom(?Ci, Iec)^ differentFrom(?Ci, Dtz)-> PPEPecParBitherapie(?x) ^ auraPourTraitementRecommande(?x, IECetDTZ)
+
+MyPatient(?x) ^ aPourTraitementCourant(?x, ?t) ^ TraitementUnaire(?t) ^ aUneHtaControlee(?x, false) ^ aPourCI(?x, ?Ci) ^ differentFrom(?Ci, Dtz)^ differentFrom(?Ci, BetaBloquant)-> PPEPecParBitherapie(?x) ^ auraPourTraitementRecommande(?x, BBetDTZ)
+
+
+
+
